@@ -111,14 +111,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu8.setText("Administracion");
 
         jMManejoDeInscripcioes.setText("Manejo de Inscripciones");
+        jMManejoDeInscripcioes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMManejoDeInscripcioesActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMManejoDeInscripcioes);
 
         jMManipulacionDeNotas.setText("Manipulacion de Notas");
+        jMManipulacionDeNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMManipulacionDeNotasActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMManipulacionDeNotas);
 
         jMenuBar1.add(jMenu8);
 
         jMAlumnosPorMateria.setText("Consultas");
+        jMAlumnosPorMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMAlumnosPorMateriaActionPerformed(evt);
+            }
+        });
 
         jMenuItem6.setText("Alumnos por Materia");
         jMAlumnosPorMateria.add(jMenuItem6);
@@ -151,11 +166,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jMFormularioDeAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMFormularioDeAlumnosActionPerformed
         jDEscritorio.removeAll();
         jDEscritorio.repaint();
-        /**GestionDeAlumnos gda = new GestionDeAlumnos();
+        GestiondeAlumnos gda = new GestiondeAlumnos();
         gda.setVisible(true);
         jDEscritorio.add(gda);
         jDEscritorio.moveToFront(gda);
-        */
+        
     }//GEN-LAST:event_jMFormularioDeAlumnosActionPerformed
 
     private void jMFormularioDeMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMFormularioDeMateriaActionPerformed
@@ -166,6 +181,33 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jDEscritorio.add(gdm);
         jDEscritorio.moveToFront(gdm);
     }//GEN-LAST:event_jMFormularioDeMateriaActionPerformed
+
+    private void jMManejoDeInscripcioesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMManejoDeInscripcioesActionPerformed
+        jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        Inscripciones ins = new Inscripciones();
+        ins.setVisible(true);
+        jDEscritorio.add(ins);
+        jDEscritorio.moveToFront(ins);
+    }//GEN-LAST:event_jMManejoDeInscripcioesActionPerformed
+
+    private void jMManipulacionDeNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMManipulacionDeNotasActionPerformed
+        jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        ActualisacionDeNotas adn = new ActualisacionDeNotas();
+        adn.setVisible(true);
+        jDEscritorio.add(adn);
+        jDEscritorio.moveToFront(adn);
+    }//GEN-LAST:event_jMManipulacionDeNotasActionPerformed
+
+    private void jMAlumnosPorMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAlumnosPorMateriaActionPerformed
+        jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        ConsulltaDeAlumnosPorMateria cdapm = new ConsulltaDeAlumnosPorMateria();
+        cdapm.setVisible(true);
+        jDEscritorio.add(cdapm);
+        jDEscritorio.moveToFront(cdapm);
+    }//GEN-LAST:event_jMAlumnosPorMateriaActionPerformed
 
     /**
      * @param args the command line arguments
