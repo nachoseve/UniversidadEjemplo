@@ -6,6 +6,7 @@
 package universidadejemplo;
 
 import Datos.MateriaData;
+import Entidades.Materia;
 
 /**
  *
@@ -184,7 +185,9 @@ public class GestionDeMaterias extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jBBuscarActionPerformed
 
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
-        
+        MateriaData md = new MateriaData();
+        md.guardarMateria(Materia);
+        md.modificarMateria(Materia);
     }//GEN-LAST:event_jBGuardarActionPerformed
 
 
